@@ -39,6 +39,11 @@ class regressor(object):
               ``y`` is a 1D ndarray it will be of the same length as axis 0 or x.   
                           
     """
+	"""
+		Below Gradient descent calculation is Batch Gradient Descent and not stochatic or mini batch as we are taking entire 
+		dataset in one iteration. Loss is also calculated for the entire dataset in each iteration.So each iteration
+		basically sees the entire dataset. You need to read the entire data set into the memory.
+	"""
     def gradient_descent_calculation(self,theta,alpha,noOfIterations):
      
         sample_size = self.x.shape[0]
